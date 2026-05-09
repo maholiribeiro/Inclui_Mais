@@ -21,7 +21,7 @@ Front-end: HTML5 e CSS3
 
 Design/Prototipagem: Figma
 
-# 🛠️ Funcionalidades
+# Funcionalidades
 
  Requisitos Funcionais (RF): 
  

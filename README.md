@@ -21,7 +21,7 @@ Front-end: HTML5 e CSS3
 
 Design/Prototipagem: Figma
 
-🛠️ Funcionalidades (Requisitos)
+# 🛠️ Funcionalidades
 
  Requisitos Funcionais (RF): 
  
@@ -39,8 +39,16 @@ Design/Prototipagem: Figma
    RNF01/02: Interface simples, acessível e responsiva (Desktop/Mobile).  
    RNF03/08: Segurança rigorosa dos dados e proteção contra acessos não autorizados.  
    RNF05: Armazenamento de senhas utilizando algoritmos de hashing avançados.  
+
+ Regra de Negócios (RN)   
+
+  RN01: Apenas usuários autenticados interagem com o sistema; Administradores editam dados técnicos.  
+  RN02: Cada usuário pode avaliar um estabelecimento apenas uma vez para manter a integridade da média.  
+  RN05: Nenhuma senha é armazenada em texto plano; todas passam por hashing.  
+  RN07: Comentários ofensivos estão sujeitos a moderação e remoção.  
+  RN08: Médias de avaliação são públicas para visualização, mesmo sem login.  
    
-Arquitetura e Estrutura
+# Arquitetura e Estrutura
 
 A aplicação segue o padrão MVC, garantindo a separação entre interface, lógica de negócio e dados.  
 
@@ -77,16 +85,8 @@ Estrutura de Pastas:
 ├── migrations/              # Histórico do banco de dados
 
 └── requirements.txt         # Dependências do projeto
-
-🔐 Regras de Negócio (RN)   
-
-  RN01: Apenas usuários autenticados interagem com o sistema; Administradores editam dados técnicos.  
-  RN02: Cada usuário pode avaliar um estabelecimento apenas uma vez para manter a integridade da média.  
-  RN05: Nenhuma senha é armazenada em texto plano; todas passam por hashing.  
-  RN07: Comentários ofensivos estão sujeitos a moderação e remoção.  
-  RN08: Médias de avaliação são públicas para visualização, mesmo sem login.  
   
-Equipe do Projeto  
+# Equipe do Projeto  
 
  Maria: Scrum Master e Desenvolvedora (Organização, Documentação e Front-end)  
  Eliete: Desenvolvedora Back-end (Autenticação, Lógica de Perfis e Segurança)  

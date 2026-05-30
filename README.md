@@ -9,15 +9,13 @@ Principais Objetivos: Desenvolver um site colaborativo para compartilhamento de 
 
 O projeto foi construído utilizando tecnologias modernas para garantir segurança e escalabilidade
 
-Linguagem: Python
+Linguagens: HTML + CSS + JavaScript + PHP
 
 Arquitetura: MVC (Model-View-Controller)
 
 Banco de Dados: PostgreSQL
 
 Persistência: ORM (Object-Relational Mapping) para gerenciamento de dados
-
-Front-end: HTML5 e CSS3
 
 Design/Prototipagem: Figma
 
@@ -56,36 +54,95 @@ Estrutura de Pastas:
 
 /projeto-inclui+
 
-├── app.py                   # Arquivo principal
+├── public/  
 
-├── config/                  # Configurações do banco de dados
+   ├── css/          
 
-├── models/                  # Definição de tabelas e lógica de dados
+   ├── js/ 
 
-│   ├── usuario.py           # Modelagem dos perfis de usuário
+   └── imagens/        
 
-│   ├── estabelecimento.py   # Dados de acessibilidade
+├── pages/           
 
-│   └── avaliação.py         # Lógica de notas e comentários
+   ├── index.php 
 
-├── controllers/             # Lógica de negócio e rotas
+   ├── login.php 
 
-│   ├── auth_controller.py   # Autenticação e Recuperação
+   ├── criar-conta.php 
 
-│   └── local_controller.py  # Busca e edição
+   ├── homepage.php 
 
-├── views/                   # Interface do Usuário
+   ├── descricao-lugar.php 
 
-│   ├── static/              # CSS, imagens e scripts
+   ├── perfil-adm.php
 
-│   └── templates/           # Arquivos HTML
+   ├── cadastro-adm.php 
 
-├── middlewares/             # Filtros de segurança
+   └── esqueci-senha.php 
 
-├── migrations/              # Histórico do banco de dados
+├── config/    
 
-└── requirements.txt         # Dependências do projeto
-  
+   └── conexao.php 
+
+├── models/           
+
+   ├── usuario.php 
+
+   ├── Local.php 
+
+   └── Avaliacao.php 
+
+├── controllers/           
+
+   ├── AuthController.php 
+
+   ├── LocalController.php 
+
+   └── AvaliacaoController.php            
+
+├── database/             
+
+   └── script.sql
+
+└── README.md
+
+# ORM
+
+USUÁRIO                                                                         
++ id_usuario : INT
++ nome : VARCHAR(100)
++ email : VARCHAR(100)
++ senha : VARCHAR(255)
++ tipo : ENUM('usuario','administrador')
++ data_cadastro : DATETIME
+
+LOCAL
++ id_local : INT
++ nome_local : VARCHAR(150)
++ endereco : VARCHAR(255)
++ categoria : VARCHAR(100)
++ descricao : TEXT
++ nivel_acessibilidade : VARCHAR(50)
+
+AVALIAÇÃO
++ id_avaliacao : INT
++ nota : INT
++ comentario : TEXT
++ anonimo : BOOLEAN
++ data_avaliacao : DATETIME
++ id_usuario : INT (FK)
++ id_local : INT (FK)
+
+RECUPERAÇÃO_SENHA
++ id_recuperacao : INT
++ token : VARCHAR(255)
++ expiracao : DATETIME
++ id_usuario : INT (FK)
+
+----------------------------
+
+<img width="397" height="268" alt="image" src="https://github.com/user-attachments/assets/ac07a7a9-6bdb-4c82-809f-bdd2efbe1857" />
+
 # Equipe do Projeto  
 
  Maria: Scrum Master e Desenvolvedora (Organização, Documentação e Front-end)  
